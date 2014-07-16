@@ -58,6 +58,7 @@ public class LogEventMonitor {
 		List<SonicLogListener> listeners = new ArrayList<SonicLogListener> (); 
 		
 		listeners.add(new ValidationLoggerListener());
+		listeners.add(new InvalidStatusListener());
 		
 		LogFileTailer tailer = 
 			new LogFileTailer(logPath, new Long(5000), listeners);
